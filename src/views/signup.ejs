@@ -1,8 +1,32 @@
-<% if (signupMessage) { %>
-    <div><%= signupMessage %></div>
-<%}%>
-<form action="/signup" method="POST">
-    <input type="email" name="email" placeholder="Inserta el email">
-    <input type="password" name="password" placeholder="Inserte password">
-    <button type="submit">Registrate</button>
-</form>
+<%- layout('layouts/main.ejs') %>
+
+<div class="row">
+  <div class="col-md4 offset-md-4">
+    <div class="card mt-4 text-center">
+      <div class="card-header">
+        <h3>SIGNUP</h3>
+      </div>
+      <div class="card-body">
+        <form action="/signup" method="POST">
+          <div class="form-group">
+            <input
+              class="form-control"
+              type="email"
+              name="email"
+              placeholder="Inserta el email"
+            />
+          </div>
+          <div class="form-group">
+            <input
+              type="password"
+              name="password"
+              placeholder="Inserte password"
+              class="form-control"
+            />
+          </div>
+          <button type="submit" class="btn btn-primary btn-block mt-4">Registrate</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
