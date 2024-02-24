@@ -16,9 +16,10 @@ passport.deserializeUser( async (id, done)=>{//para buscar la id de sesion que e
 
 
 passport.use('local-signup', new localStrategy({
+    
     usernameField: 'email',
     passwordField: 'password',
-    passReqToCallback: true
+    passReqToCallback: true//esto es para recivir los datos request
 }, async (req, email, password, done)=>{
 
     const user = await User.findOne({email: email})

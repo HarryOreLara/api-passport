@@ -19,7 +19,7 @@ app.set('port', process.env.PORT || 3000);
 
 
 //middlewares
-app.use(morgan('dev'));
+app.use(morgan('dev'));//Esto muestra las rutas, protocolo y el tiempo de respuesta
 app.use(express.urlencoded({extended:false}));
 app.use(session({
     secret: 'mysecretsession',
